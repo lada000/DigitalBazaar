@@ -15,18 +15,20 @@ DigitalBazaar is a simple web application that allows users to sell and buy prod
 
 1. **Clone a repository**:
 
-    ` ` `bash
+  ```bash
     git clone https://github.com/yourusername/DigitalBazaar.git
-    ` ` `
+  ```
 
 2. **Installing dependencies**:
 
-   ` ` `bash
+  ```bash
    cd DigitalBazaar
    bundle install
-   ` ` `
+  ```
 
 3. **Database setup**:
 
-    ` ` `rails db:create
-    rails db:migrate` ` `
+  ```bash
+    rails db:create
+    rails db:migrate
+  ```
