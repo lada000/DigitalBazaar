@@ -4,12 +4,11 @@ import  {Link, Flex, Spacer, Container, Box, Text, List, ListItem} from '@chakra
 const Header = () => {
     return (
         <Box as="header" padding="8px">
-            <Container maxW="container.lg" textTransform="uppercase">
-                <Flex>
+            <Container maxW="8xl" textTransform="uppercase">
+                <Flex justifyContent="space-between">
                     <Text>NEOBAZAAR</Text>
-                    <Spacer/>
                         <List>
-                        <Flex direction="row" gap="40px">
+                        <Flex direction="row" gap="40px" >
                             <ListItem>
                                 <Link>about us</Link>
                             </ListItem>
@@ -21,7 +20,6 @@ const Header = () => {
                             </ListItem>
                             </Flex>
                         </List>
-                    <Spacer/>
                     <Link> Log in </Link>
                 </Flex>
 
