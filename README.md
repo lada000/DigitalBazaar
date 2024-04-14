@@ -32,3 +32,17 @@ DigitalBazaar is a simple web application that allows users to sell and buy prod
     rails db:create
     rails db:migrate
   ```
+
+## WHAT NEW
+*The Database `digital_bazaar_development` and the following models in it were created
+- **User**: Represents a system user who has a username, email address, password hash, role.
+- **Product**: Represents a product that has a name, description and price.
+- **Cart**: Represents a cart that can contain products.
+- **CartItem**: Contains information about the items in the cart, such as the number of items.
+- **Order**: Represents an order containing information about the order amount and its status.
+- **OrderItem**: Contains information about the items in the order, such as quantity of items and unit price.
+- **Payment**: Contains payment information such as payment date, amount, payment method and payment status.
+
+*A controller has been created for each model
+
+*Configured the CanCanCan gem for authorization, assigned the roles of guest, administrator and user

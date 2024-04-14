@@ -13,6 +13,10 @@ gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 
+#my rubygems
+gem 'cancancan'
+
+
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
 end
@@ -25,3 +29,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "devise", "~> 4.9"
+gem "omniauth-google-oauth2", "~> 1.1"
