@@ -2,7 +2,7 @@ import React from "react";
 import Description from "./_description";
 import ProductsList from "./_productsList";
 import Categories from "./_categories";
-import Header from "../../components/header";
+import Header from "../../components/Header";
 
 
 
