@@ -1,18 +1,21 @@
 import React from "react";
 import Description from "./_description";
 import ProductsList from "./_productsList";
+import Categories from "./_categories";
+import Header from "../../components/header";
 
 
 
 
-const Main = () => {
+const Home = () => {
   return (
     <>
+    <Header/>
     <Description/>
     <ProductsList/>
-      
+    <Categories/>  
     </>
   );
 };
 
-export default Main;
+export default Home;

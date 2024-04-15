@@ -20,7 +20,7 @@ import { SiAudiomack } from "react-icons/si";
 const flexItemStyle = {
   flexBasis: "calc(50% - 20px)",
   height: "calc(50% - 20px)",
-  margin: "10px",
+  margin: "20px 0",
   blockSize: "368px",
   borderRadius: "20px",
   padding: "30px",
