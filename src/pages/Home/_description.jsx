@@ -23,9 +23,10 @@ const Description = () => {
                   textTransform='uppercase'
                   display='flex'
                   flexDirection='column'
-                  gap='20px'>
-                  <Text>digital platform</Text>
-                  <Text>
+                  gap='20px'
+                  >
+                  <Text textStyle="body-large">digital platform</Text>
+                  <Text fontWeight="400" fontSize="16px" lineHeight="18.4px" fontFamily="Arial">
                     This is a space for interaction between creators and users,
                     promotes the distribution of digital content and provides
                     opportunities for monetization and development in the
@@ -34,7 +35,7 @@ const Description = () => {
                 </Box>{" "}
               </GridItem>
               <GridItem gridColumn='1 / span 3' gridRow='3 / 4'>
-                <Heading fontSize='180px' lineHeight='170px'>
+                <Heading fontSize='180px' lineHeight='170px' fontWeight="500" >
                   Digital
                 </Heading>
               </GridItem>
@@ -46,6 +47,7 @@ const Description = () => {
                   fontSize='180px'
                   lineHeight='140px'
                   position='absolute'
+                  fontWeight="500"
                   left='3vw'>
                   Products
                 </Heading>

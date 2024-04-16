@@ -1,10 +1,12 @@
 import * as React from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
+import customTheme from './theme/ProviderTheme';
 import Home from './pages/Home/home';
+import { ChakraProvider } from "@chakra-ui/react";
+
 
 function App() {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={customTheme}>
       <Home/>
   </ChakraProvider>
   );

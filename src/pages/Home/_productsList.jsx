@@ -1,5 +1,6 @@
 import React from "react";
 import Arrow from "../../image/Arrow.png";
+import Arrow2 from "../../image/Arrow2.png"
 import {
   Box,
   Container,
@@ -10,6 +11,8 @@ import {
   Button,
   Image,
   Icon,
+  GridItem,
+  Grid,
 } from "@chakra-ui/react";
 import { BsArrowRight } from "react-icons/bs";
 import { Md3DRotation } from "react-icons/md";
@@ -18,12 +21,12 @@ import { TbWorld } from "react-icons/tb";
 import { SiAudiomack } from "react-icons/si";
 
 const flexItemStyle = {
-  flexBasis: "calc(50% - 20px)",
+  flexBasis: "calc(50% - 10px)",
   height: "calc(50% - 20px)",
-  margin: "20px 0",
+  margin: "10px 0",
   blockSize: "368px",
   borderRadius: "20px",
-  padding: "30px",
+  padding: "35px",
 };
 
 const posAbsolute = {
@@ -54,12 +57,12 @@ const ProductsList = () => {
             size={50}
           />
           <Image
-            src={Arrow}
+            src={Arrow2}
             style={{
               position: "absolute",
-              bottom: "-30%",
+              bottom: "-45%",
               left: "100%",
-              transform: "rotate(70deg)",
+              transform: "rotate(0deg)",
             }}
             size={50}
           />
@@ -125,12 +128,15 @@ const ProductsList = () => {
             }}
           />
 
-          <Text color='rgba(0, 0, 0, 1)'>NEOBAZAAR</Text>
+          <Text color='rgba(0, 0, 0, 1)' fontFamily="Arial" fontWeight="400" fontSize="25px">NEOBAZAAR</Text>
         </Box>
         <Flex wrap='wrap' justify='space-between' align='flex-start'>
           <Box bg='rgba(255, 144, 232, 0.4)' style={flexItemStyle}>
-            <Text textAlign='center'> Sell anything </Text>
-            <List textTransform='uppercase'>
+            <Text textStyle='heading-small' mb='16px'>
+              {" "}
+              Sell anything{" "}
+            </Text>
+            <List textStyle='body-small' color='rgba(145, 101, 136, 1)'>
               <ListItem>Sell your Top 10 lists</ListItem>
               <ListItem>Sell your crypto tips</ListItem>
               <ListItem>Sell your fractal pack</ListItem>
@@ -141,8 +147,14 @@ const ProductsList = () => {
             </List>
           </Box>
           <Box bg='rgba(167, 217, 212, 1)' style={flexItemStyle}>
-            <Text textAlign='center'>Sell to anyone</Text>
-            <Text>
+            <Text textAlign='end' textStyle='heading-small' mb='16px'>
+              Sell to anyone
+            </Text>
+            <Text
+              textStyle='body-small'
+              textAlign='right'
+              color='rgba(0, 90, 78, 1)'
+              textTransform='uppercase'>
               Build a loyal following with simple posts, email newsletters, and
               automated workflows. Plus let your customers pay what they want or
               choose between one-time, recurring, or fixed-length payments in
@@ -153,8 +165,13 @@ const ProductsList = () => {
             bg='rgba(255, 233, 153, 1)'
             style={flexItemStyle}
             alignContent='flex-end'>
-            <Text>Sell anywhere</Text>
-            <Text>
+            <Text textStyle='heading-small' mb='16px'>
+              Sell anywhere
+            </Text>
+            <Text
+              textStyle='body-small'
+              color='rgba(159, 137, 57, 1)'
+              textTransform='uppercase'>
               Create and customize your storefront with our all-in-one platform
               or choose to use your personal site instead. With Zapier, you can
               seamlessly connect your neobazaar account to thousands of apps in
@@ -164,24 +181,31 @@ const ProductsList = () => {
           <Box
             bg='rgba(255, 144, 232, 0.4)'
             style={flexItemStyle}
-            display='flex'
-            flexDirection='column'
-            justifyContent='center'
-            alignItems='center'>
-            <Box position='relative'>
-              <Text textAlign='center'>Make your own way</Text>
-              <Button
-                rightIcon={<BsArrowRight />}
-                colorScheme='teal'
-                position='absolute'
-                right='-170%'
-                top='410%'
-                minW='281px'
-                display='flex'
-                justifyContent='space-between'>
-                Explore Features
-              </Button>
-            </Box>
+            display='flex'>
+            <Grid
+              templateColumns='repeat(2, 1fr)'
+              templateRows='2fr repeat(2, 1fr)'
+              gap={0}
+              w='100%'>
+              <GridItem gridArea='2 / 1 / 3 / 3'  p={4}>
+                <Text textAlign='center' textStyle='heading-small' mb='16px'>
+              Make your own way
+            </Text>
+              </GridItem>
+              <GridItem gridArea='3 / 2 / 4 / 3'  p={4}>
+                 <Button
+              rightIcon={<BsArrowRight fontSize="x-large" />}
+              colorScheme='teal'
+              w="100%"
+              p="10px 20px"
+              display='flex'
+              justifyContent='space-between'
+              textStyle="button-large">
+              Explore Features
+            </Button>
+              </GridItem>
+            </Grid>        
+          
           </Box>
         </Flex>
       </Container>
