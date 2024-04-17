@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Link,
   Container,
   Box,
   Text,
@@ -8,8 +7,11 @@ import {
   ListItem,
   Grid,
   GridItem,
+  Link as ChakraLink,
 } from "@chakra-ui/react";
 import { FaFacebook, FaInstagram, FaLinkedin} from 'react-icons/fa';
+
+import { Link as ReactRouterLink} from 'react-router-dom';
 
 
 
@@ -71,10 +73,10 @@ const Footer = () => {
       >
         <List textStyle="body-large" display="flex" flexDirection="column" gap={3}>
           <ListItem >
-            <Link>PRivacy POLICY</Link>
+            <ChakraLink as={ReactRouterLink}  to="/privacy-policy">PRivacy POLICY</ChakraLink>
           </ListItem>
           <ListItem>
-            <Link>tERMS OF SERVICE</Link>
+            <ChakraLink as={ReactRouterLink} to="/terms-of-service">tERMS OF SERVICE</ChakraLink>
           </ListItem>
         </List>
       </GridItem>
@@ -83,10 +85,10 @@ const Footer = () => {
       >
         <List textStyle="body-large" display="flex" flexDirection="column" gap={3}>
           <ListItem>
-            <Link>fEATURES</Link>
+            <ChakraLink>fEATURES</ChakraLink>
           </ListItem>
           <ListItem>
-            <Link>PRICING</Link>
+            <ChakraLink>PRICING</ChakraLink>
           </ListItem>
         </List>
       </GridItem>
@@ -95,10 +97,10 @@ const Footer = () => {
       >
         <List textStyle="body-large" display="flex" flexDirection="column" gap={3}>
           <ListItem>
-            <Link>HELP</Link>
+            <ChakraLink>HELP</ChakraLink>
           </ListItem>
           <ListItem>
-            <Link>SECURITY</Link>
+            <ChakraLink>SECURITY</ChakraLink>
           </ListItem>
         </List>
       </GridItem>
@@ -109,7 +111,6 @@ const Footer = () => {
       </GridItem>
       <GridItem
         gridArea="5 / 4 / 6 / 7"
-        bg="orange.500" // Example background color for div12
       >
         
           <List textStyle="body-large" display="flex" flexDirection="column" gap={2}>
@@ -124,9 +125,9 @@ const Footer = () => {
         display="flex" alignItems="flex-end" 
       >
           <List display="flex" justifyContent="space-between" width="100%">
-            <Link><ListItem><FaFacebook color="rgba(178, 51, 134, 1)" fontSize="x-Large"/></ListItem></Link>
-            <Link><ListItem><FaInstagram color="rgba(178, 51, 134, 1)" fontSize="x-Large"/></ListItem></Link>
-            <Link><ListItem><FaLinkedin color="rgba(178, 51, 134, 1)" fontSize="x-Large"/></ListItem></Link>
+            <ChakraLink><ListItem><FaFacebook color="rgba(178, 51, 134, 1)" fontSize="x-Large"/></ListItem></ChakraLink>
+            <ChakraLink><ListItem><FaInstagram color="rgba(178, 51, 134, 1)" fontSize="x-Large"/></ListItem></ChakraLink>
+            <ChakraLink><ListItem><FaLinkedin color="rgba(178, 51, 134, 1)" fontSize="x-Large"/></ListItem></ChakraLink>
           </List>
       </GridItem>
     </Grid>

@@ -1,26 +1,28 @@
 import React from "react";
-import  {Link, Flex, Container, Box, Text, List, ListItem} from '@chakra-ui/react';
+import  {Link as ChakraLink, Flex, Container, Box, List, ListItem} from '@chakra-ui/react';
+import { Link as ReactRouterLink } from 'react-router-dom';
+
 
 const Header = () => {
     return (
         <Box as="header" padding="8px" position="fixed" top={0} w="100%" zIndex="10" bg="white">
             <Container maxW="8xl" textTransform="uppercase">
                 <Flex justifyContent="space-between" alignItems="center">
-                    <Text fontWeight="500" fontSize="30px" lineHeight="35.8px">NEOBAZAAR</Text>
+                    <ChakraLink as={ReactRouterLink} to="/" style={{ textDecoration: "none" }} fontWeight="500" fontSize="30px" lineHeight="35.8px">NEOBAZAAR</ChakraLink>
                         <List textStyle="button-small">
                         <Flex direction="row" gap="40px" >
                             <ListItem>
-                                <Link>about us</Link>
+                                <ChakraLink>about us</ChakraLink>
                             </ListItem>
                             <ListItem>
-                                <Link>Features</Link>
+                                <ChakraLink>Features</ChakraLink>
                             </ListItem>
                             <ListItem>
-                                <Link>pricing</Link>
+                                <ChakraLink>pricing</ChakraLink>
                             </ListItem>
                             </Flex>
                         </List>
-                    <Link textStyle="button-medium"> Log in </Link>
+                    <ChakraLink textStyle="button-medium"> Log in </ChakraLink>
                 </Flex>
 
             </Container>

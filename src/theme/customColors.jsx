@@ -1,4 +1,3 @@
-import { extendTheme } from "@chakra-ui/react";
 
 const customColors = {
     fuchsia: "rgba(178, 51, 134, 1)",
