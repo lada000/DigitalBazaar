@@ -14,25 +14,31 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import Gif3D from "../../image/Categories/Gif3D.gif";
-import Education from "../../image/Categories/education.jpg";
+import Education from "../../image/Categories/education.gif";
 import Code from "../../image/Categories/code.gif";
 import Game from "../../image/Categories/Game.gif";
 import Audio from "../../image/Categories/audio.gif";
 import Paint from "../../image/Categories/paint.gif";
-import Photo from "../../image/Categories/photo.jpg";
-import Sport from "../../image/Categories/sport.jpg";
-import Design from "../../image/Categories/design.jpg";
+import Photo from "../../image/Categories/photo.gif";
+import Sport from "../../image/Categories/sport.gif";
+import Design from "../../image/Categories/Design.gif";
 import ButtonStartSelling from "../../components/buttonStartSelling";
 
 const linkCategories = {
   color: "#867777",
   fontFamily: "Arial",
-  padding: "10px 20px",
-  fontSize: "25px",
+  fontSize:{ base: "25px" },
   lineHeight: "28.75px",
   fontWeight: "400",
-  margin: "20px 0 0",
 }
+
+const backgroundImageStyle = {
+  bgPosition: "center",
+  bgRepeat: "no-repeat",
+  bgSize: "cover",
+  width: "100%",
+  height: "100%",
+ };
 
 const Categories = () => {
   return (
@@ -46,73 +52,68 @@ const Categories = () => {
             Discover the best-selling products and creators
           </Text>
         </Center>
-        <Grid
-          templateColumns='repeat(3, 1fr)'
-          templateRows='repeat(3, 1fr)'
-          gap={6}>
-          <GridItem>
-            <Flex direction='column'>
-              <Image src={Gif3D} maxH='390px' alt='3D gif' />
-              <Link style={linkCategories}>3D →</Link >
-            </Flex>
-          </GridItem>
+        
+    <Grid
+      templateColumns="repeat(3, 1fr)"
+      templateRows="1fr 0.1fr 1fr 0.1fr 1fr 0.1fr"
+      gap={5}
+    >
+      <Box gridArea="1 / 1 / 2 / 2" bgImage={Gif3D} {...backgroundImageStyle}/>
+      <Box gridArea="2 / 1 / 3 / 2" p="10px 20px">
+      <Link style={linkCategories}>3D →</Link >
+      </Box>
 
-          <GridItem>
-            <Flex direction='column'>
-              <Image src={Education} maxH='390px' alt='Education' />
-              <Link style={linkCategories}>EDUCATION →</Link >
-            </Flex>
-          </GridItem>
+      <Box gridArea="1 / 2 / 2 / 3" bgImage={Education} {...backgroundImageStyle} > 
+      </Box>
+      <Box gridArea="2 / 2 / 3 / 3" p="10px 20px">
+      <Link style={linkCategories}>EDUCATION →</Link >
+      </Box>
 
-          <GridItem>
-            <Flex direction='column'>
-              <Image src={Audio} maxH='390px' alt='Audio gif' />
-              <Link style={linkCategories}>AUDIO →</Link >
-            </Flex>
-          </GridItem>
 
-          <GridItem>
-            <Flex direction='column'>
-              <Image src={Design} maxH='390px' alt='Design' />
-              <Link style={linkCategories}>DESIGN →</Link >
-            </Flex>
-          </GridItem>
+      <Box gridArea="1 / 3 / 2 / 4" 
+       bgImage={Audio} {...backgroundImageStyle}>        
+      </Box>
+      <Box gridArea="2 / 3 / 3 / 4" p="10px 20px">      
+      <Link style={linkCategories}>AUDIO →</Link >
+      </Box>
 
-          <GridItem>
-            <Flex direction='column'>
-              <Image src={Paint} maxH='390px' alt='Paint gif' />
-              <Link style={linkCategories}>DRAWING & PAINTING →</Link >
-            </Flex>
-          </GridItem>
 
-          <GridItem>
-            <Flex direction='column'>
-              <Image src={Photo} maxH='390px' alt='Photo' />
-              <Link style={linkCategories}>PHOTOGRAPHY →</Link >
-            </Flex>
-          </GridItem>
+      <Box gridArea="3 / 1 / 4 / 2"  bgImage={Design} {...backgroundImageStyle}/>
+      <Box gridArea="4 / 1 / 5 / 2" p="10px 20px">
+      <Link style={linkCategories}>DESIGN →</Link >
+      </Box>
 
-          <GridItem>
-            <Flex direction='column'>
-              <Image src={Game} maxH='390px' alt='Game gif' />
-              <Link style={linkCategories}>GAMING →</Link >
-            </Flex>
-          </GridItem>
 
-          <GridItem>
-            <Flex direction='column'>
-              <Image src={Sport} maxH='390px' alt='Sport' />
-              <Link style={linkCategories}>FITNESS & HEALTH →</Link >
-            </Flex>
-          </GridItem>
+      <Box gridArea="3 / 2 / 4 / 3"  bgImage={Paint} {...backgroundImageStyle} />
+      <Box gridArea="4 / 2 / 5 / 3" p="10px 20px">
+      <Link style={linkCategories}>DRAWING & PAINTING →</Link >
+      </Box>
 
-          <GridItem>
-            <Flex direction='column'>
-              <Image src={Code} maxH='390px' alt='Code gif' />
-              <Link style={linkCategories}>SOFTWARE DEVELOPMENT →</Link >
-            </Flex>
-          </GridItem>
-        </Grid>
+
+      <Box gridArea="3 / 3 / 4 / 4" >
+      <Image src={Photo} objectFit="cover" alt='Photo' /> </Box>
+      <Box gridArea="4 / 3 / 5 / 4" p="10px 20px">
+      <Link style={linkCategories}>PHOTOGRAPHY →</Link >    
+      </Box>
+
+
+      <Box gridArea="5 / 1 / 6 / 2"  bgImage={Game} {...backgroundImageStyle} />
+      <Box gridArea="6 / 1 / 7 / 2" p="10px 20px">
+      <Link style={linkCategories}>GAMING →</Link >   
+         </Box>
+
+
+      <Box gridArea="5 / 2 / 6 / 3" bgImage={Sport} {...backgroundImageStyle} />
+      <Box gridArea="6 / 2 / 7 / 3" p="10px 20px">
+      <Link style={linkCategories}>FITNESS & HEALTH →</Link >     
+      </Box>
+
+
+      <Box gridArea="5 / 3 / 6 / 4"  bgImage={Code} {...backgroundImageStyle} />
+      <Box gridArea="6 / 3 / 7 / 4" p="10px 20px">
+      <Link style={linkCategories}>SOFTWARE DEVELOPMENT →</Link >
+      </Box>
+    </Grid>
       </Container>
     </Box>
   );
