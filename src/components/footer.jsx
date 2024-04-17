@@ -114,7 +114,7 @@ const Footer = () => {
       >
         
           <List textStyle="body-large" display="flex" flexDirection="column" gap={2}>
-            <ListItem>minsk</ListItem>
+            <ListItem>Minsk</ListItem>
             <ListItem>Nezavisimosti proospect, 21 </ListItem>
             <ListItem>220095, Minsk, Belarus </ListItem>
             <ListItem>Phone: +37529 2144897</ListItem>
