@@ -32,5 +32,11 @@ DigitalBazaar is a simple web application that allows users to sell and buy prod
     rails db:create
     rails db:migrate
   ```
-
+xw
 ## WHAT NEW
+Today i did the following in our DigitalBazaar project:
+
+* Added routes for the user profile and his regional resources, such as products.
+* Created a user profile page using the “Add Product” and “Change Password” buttons.
+* Added the ability to edit the user profile and change the text.
+* Fixed bugs related to using incorrect routes and provided templates.
