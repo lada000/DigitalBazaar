@@ -1,0 +1,13 @@
+<h1>New Product</h1>
+<%= form_with(model: [@user, @product], url: user_products_path(@user)) do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :description %>
+  <%= form.text_area :description %>
+
+  <%= form.label :price %>
+  <%= form.number_field :price %>
+
+  <%= form.submit %>
+<% end %>

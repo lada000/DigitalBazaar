@@ -6,19 +6,14 @@
     <li><%= link_to 'Features', '#' %></li>
     <li><%= link_to 'Parsing', '#' %></li>
     <% if user_signed_in? %>
-      <li><%= link_to 'Profile', edit_user_registration_path %></li>
+      <li><%= link_to 'Profile', user_path(current_user) %></li>
+      <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
     <% else %>
       <li><%= link_to 'Start Selling', new_user_registration_path %></li>
+      <li><%= link_to 'Login', new_user_session_path %></li>
     <% end %>
   </ul>
 </nav>
-
-<% if user_signed_in? %>
-  <p>Welcome, <%= current_user.username %>! <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-primary' %></p>
-<% else %>
-  <%= link_to 'Login', new_user_session_path, class: 'btn btn-secondary' %>
-  <%= link_to 'Register', new_user_registration_path, class: 'btn btn-primary' %>
-<% end %>
 
 <h2>Categories</h2>
 <ul>
@@ -26,9 +21,9 @@
   <li><%= link_to 'Education', '#' %></li>
   <li><%= link_to 'Design', '#' %></li>
   <li><%= link_to 'Audio', '#' %></li>
-  <li><%= link_to 'Drawing&Painting', '#' %></li>
+  <li><%= link_to 'Drawing & Painting', '#' %></li>
   <li><%= link_to 'Photography', '#' %></li>
   <li><%= link_to 'Gaming', '#' %></li>
-  <li><%= link_to 'Fitness&Health', '#' %></li>
+  <li><%= link_to 'Fitness & Health', '#' %></li>
   <!-- Добавьте больше категорий здесь по мере необходимости -->
 </ul>

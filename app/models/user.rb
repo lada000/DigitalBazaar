@@ -4,8 +4,7 @@ class User < ApplicationRecord
   has_many :orders
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable,
-         :omniauthable, omniauth_providers: [:google_oauth2]
+         :recoverable, :rememberable, :validatable
 
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
