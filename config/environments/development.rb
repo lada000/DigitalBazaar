@@ -31,7 +31,7 @@ Rails.application.configure do
     address:              'smtp.example.com',
     port:                 587,
     domain:               'example.com',
-    user_name:            'NEOBAZAAR_EMAIL_ADDRESS',
+    user_name:            'neodigitalbazaar@gmail.com',
     password:             'NEOBAZAAR_EMAIL_PASSWORD',
     authentication:       'plain',
     enable_starttls_auto: true
