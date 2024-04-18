@@ -5,6 +5,7 @@ import Categories from "./_categories";
 import Header from "../../components/Header";
 import Footer from "../../components/footer";
 import Reviews from "./_reviews";
+import StartSelling from "./_startSelling";
 
 
 
@@ -17,6 +18,7 @@ const Home = () => {
     <ProductsList/>
     <Categories/>  
     <Reviews/>
+    <StartSelling/>
     <Footer/>
     </>
   );
