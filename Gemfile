@@ -17,6 +17,7 @@ gem "bootsnap", require: false
 gem 'cancancan'
 gem "devise", "~> 4.9"
 gem "omniauth-google-oauth2", "~> 1.1"
+gem 'dotenv-rails'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
