@@ -22,7 +22,7 @@ const Header = () => {
                             </ListItem>
                             </Flex>
                         </List>
-                    <ChakraLink textStyle="button-medium"> Log in </ChakraLink>
+                    <ChakraLink textStyle="button-medium" as={ReactRouterLink} to="/log-in"> Log in </ChakraLink>
                 </Flex>
 
             </Container>
