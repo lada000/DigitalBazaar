@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { useForm } from "react-hook-form";
+import { Link as ReactRouterLink } from 'react-router-dom';
 import {
   Box,
   FormControl,
@@ -10,7 +11,7 @@ import {
   IconButton,
   VStack,
   Text,
-  Link,
+  Link as ChakraLink,
   Checkbox,
   Flex,
 } from "@chakra-ui/react";
@@ -58,7 +59,7 @@ const FormLogIn = () => {
         </FormControl>
         <Flex justifyContent="flex-end" width="100%">
           <Box>
-            <Link textStyle="body-small">Forgot your password?</Link>
+            <ChakraLink textStyle="body-small">Forgot your password?</ChakraLink>
           </Box>
         </Flex>
         <FormControl>
@@ -68,6 +69,7 @@ const FormLogIn = () => {
               id='password'
               type={showPassword ? "text" : "password"}
               placeholder='Password'
+              autoComplete='current-password'
               {...register("password", { required: "Password is required." })}
               sx={{
                 color: "black",
@@ -98,9 +100,9 @@ const FormLogIn = () => {
       </VStack>
       <Text textStyle='body-small' margin='20px 0'>
         Don’t have an account? 
-        <Link textStyle='button-medium' color='#fff' padding="0 5px">
+        <ChakraLink as={ReactRouterLink} to="/sign-up" textStyle='button-medium' color='#fff' padding="0 5px">
           Sign up
-        </Link>
+        </ChakraLink>
       </Text>
     </Box>
   );

@@ -13,16 +13,16 @@ import {
   Grid,
   SimpleGrid,
 } from "@chakra-ui/react";
-import Header from "../components/Header";
 import LoginSquares from "../components/LogInSignUp/loginSquares";
 import ButtonGoogle from "../components/LogInSignUp/buttonGoogle";
 import FormLogIn from "../components/LogInSignUp/formLogIn";
 import FormLogInSeparator from "../components/LogInSignUp/formLogInSeparator";
+import HeaderLogIn from "../components/LogInSignUp/headerLogIn";
 
 const LogIn = () => {
   return (
     <Box as='section' bgColor='green-black' w='100vw' h='100vh' overflow="auto">
-      <Header />
+      <HeaderLogIn />
       <Container maxW='8xl'>
         <Box display='flex' margin='50px auto'>
           <Box margin='0 100px 0 0' width='50%'>
