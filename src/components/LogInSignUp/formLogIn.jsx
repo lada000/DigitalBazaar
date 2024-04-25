@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link as ReactRouterLink } from 'react-router-dom';
+import { Link as ReactRouterLink } from "react-router-dom";
 import {
   Box,
   FormControl,
@@ -34,15 +34,15 @@ const FormLogIn = () => {
 
   return (
     <Box as='form' onSubmit={handleSubmit(onSubmit)}>
-      <VStack alignItems="flex-start" gap="0">
-        <FormControl m="0 0 15px">
+      <VStack alignItems='flex-start' gap='0'>
+        <FormControl m='0 0 15px'>
           <FormLabel htmlFor='email' />
           <Input
             id='email'
             type='email'
             placeholder='E-mail'
             autoComplete='email'
-            {...register("email", { required: "Email is required." })}
+            {...register("email", { required: true })}
             sx={{
               color: "black",
               bg: "white",
@@ -57,9 +57,11 @@ const FormLogIn = () => {
             }}
           />
         </FormControl>
-        <Flex justifyContent="flex-end" width="100%">
+        <Flex justifyContent='flex-end' width='100%'>
           <Box>
-            <ChakraLink textStyle="body-small">Forgot your password?</ChakraLink>
+            <ChakraLink textStyle='body-small'>
+              Forgot your password?
+            </ChakraLink>
           </Box>
         </Flex>
         <FormControl>
@@ -70,7 +72,7 @@ const FormLogIn = () => {
               type={showPassword ? "text" : "password"}
               placeholder='Password'
               autoComplete='current-password'
-              {...register("password", { required: "Password is required." })}
+              {...register("password", { required: true })}
               sx={{
                 color: "black",
                 bg: "white",
@@ -93,14 +95,33 @@ const FormLogIn = () => {
             </InputRightElement>
           </InputGroup>
         </FormControl>
-        <Checkbox borderColor='black' bg='transparent' textStyle='body-small' margin="15px 0">
+        <Checkbox
+          
+          sx={{
+            ".chakra-checkbox__control": {
+              backgroundColor: "transparent",
+              borderColor: "black",                
+              textStyle: "body-small",
+              margin: '15px 0',
+              _checked: {
+                backgroundColor: "transparent",
+                borderColor: "black",
+                color: "black",
+              },
+            },
+          }}>
           Remember me
         </Checkbox>
         <ButtonLogIn />
       </VStack>
       <Text textStyle='body-small' margin='20px 0'>
-        Don’t have an account? 
-        <ChakraLink as={ReactRouterLink} to="/sign-up" textStyle='button-medium' color='#fff' padding="0 5px">
+        Don’t have an account?
+        <ChakraLink
+          as={ReactRouterLink}
+          to='/sign-up'
+          textStyle='button-medium'
+          color='#fff'
+          padding='0 5px'>
           Sign up
         </ChakraLink>
       </Text>

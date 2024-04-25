@@ -1,5 +1,5 @@
 import React from 'react'
-import  {Container, Box, Grid, GridItem} from '@chakra-ui/react';
+import  { Box, Grid, GridItem} from '@chakra-ui/react';
 import { Md3DRotation } from "react-icons/md";
 import { CiFaceSmile } from "react-icons/ci";
 import { TbWorld } from "react-icons/tb";

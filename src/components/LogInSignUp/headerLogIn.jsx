@@ -1,5 +1,5 @@
 import React from "react";
-import  {Link as ChakraLink, Flex, Container, Box, List, ListItem} from '@chakra-ui/react';
+import  {Link as ChakraLink, Flex, Container, Box,} from '@chakra-ui/react';
 import { Link as ReactRouterLink } from 'react-router-dom';
 
 
