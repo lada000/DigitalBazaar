@@ -9,13 +9,11 @@ import {
   InputRightElement,
   IconButton,
   VStack,
-  Text,
   Link as ChakraLink,
   Checkbox,
-  Flex,
   Button,
 } from "@chakra-ui/react";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
@@ -128,7 +126,7 @@ const FormSignUp = () => {
           bg='#000'
           color='#fff'
           isDisabled={!isAgreed || isSubmitting}
-          _hover={{ bg: "fuchsia" }}>
+          _hover={{ bg: "#000" }}>
           Sign up
         </Button>
 
@@ -145,6 +143,9 @@ const FormSignUp = () => {
                   backgroundColor: "transparent",
                   borderColor: "black",
                   color: "black",
+                },
+                _hover: {
+                  bg: "transparent",
                 },
               },
             }}

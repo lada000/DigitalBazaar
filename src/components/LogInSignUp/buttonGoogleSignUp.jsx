@@ -3,7 +3,7 @@ import { Button, Center } from "@chakra-ui/react";
 import { FcGoogle } from "react-icons/fc";
 
 
-const ButtonGoogle = () => {
+const ButtonGoogleSignUp = () => {
   return (
     <Center>
       <Button leftIcon={<FcGoogle />}
@@ -18,10 +18,10 @@ const ButtonGoogle = () => {
         lineHeight= "20px"
         _hover={{ bg: "fuchsia" }}
         >
-        Log in with Google
+        Sign Up with Google
       </Button>
     </Center>
   );
 };
 
-export default ButtonGoogle;
+export default ButtonGoogleSignUp;

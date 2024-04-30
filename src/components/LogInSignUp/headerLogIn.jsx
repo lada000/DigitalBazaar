@@ -9,7 +9,6 @@ const HeaderLogIn = () => {
             <Container maxW="8xl" textTransform="uppercase">
                 <Flex justifyContent="space-between" alignItems="center">
                     <ChakraLink as={ReactRouterLink} to="/" style={{ textDecoration: "none" }} fontWeight="500" fontSize="30px" lineHeight="35.8px">NEOBAZAAR</ChakraLink>
-                    <ChakraLink textStyle="button-medium" as={ReactRouterLink} to="/sign-up"> Sign Up </ChakraLink>
                 </Flex>
 
             </Container>

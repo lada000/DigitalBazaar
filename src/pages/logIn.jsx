@@ -1,10 +1,10 @@
 import React from "react";
 import { Box, Container, Text } from "@chakra-ui/react";
 import LoginSquares from "../components/LogInSignUp/loginSquares";
-import ButtonGoogle from "../components/LogInSignUp/buttonGoogle";
 import FormLogInSeparator from "../components/LogInSignUp/formSeparator";
 import HeaderLogIn from "../components/LogInSignUp/headerLogIn";
 import FormLogIn from "../components/LogInSignUp/formLogIn";
+import ButtonGoogleLogIn from "../components/LogInSignUp/buttonGoogleLogIn";
 
 const LogIn = () => {
   return (
@@ -30,7 +30,7 @@ const LogIn = () => {
                 Welcom to our platform NeoBazaar
               </Text>
             </Box>
-            <ButtonGoogle />
+            <ButtonGoogleLogIn />
             <FormLogInSeparator />
             <FormLogIn />
           </Box>
