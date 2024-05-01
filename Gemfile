@@ -18,6 +18,8 @@ gem 'cancancan'
 gem "devise", "~> 4.9"
 gem "omniauth-google-oauth2", "~> 1.1"
 gem 'dotenv-rails'
+gem "rack-cors", "~> 2.0"
+gem "rails_12factor"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
