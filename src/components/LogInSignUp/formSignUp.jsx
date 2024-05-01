@@ -137,6 +137,7 @@ const FormSignUp = () => {
             sx={{
               ".chakra-checkbox__control": {
                 backgroundColor: "transparent",
+                
                 borderColor: "black",                
                 textStyle: "body-small",
                 _checked: {

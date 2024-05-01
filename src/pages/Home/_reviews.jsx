@@ -55,7 +55,7 @@ const Reviews = () => {
     backgroundSize: "contain, cover",
     color: "#fff",
     position: "relative",
-    transition: "all .4s ease-in-out",
+    transition: "all .5s",
   };
 
   const flexTextStyle = {

@@ -12,7 +12,7 @@ const LogIn = () => {
       <HeaderLogIn />
       <Container maxW='8xl'>
         <Box display='flex' margin='50px auto'>
-          <Box margin='0 100px 0 0' width='50%'>
+          <Box margin='0 174px 0 0' width='50%'>
             <Box
               display='flex'
               flexDirection='column'
