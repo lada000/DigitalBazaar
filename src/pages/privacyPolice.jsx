@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Box, Center, Text, ListItem, List} from "@chakra-ui/react";
+import { Container, Box, Center, Text, ListItem, List, Link as ChakraLink, } from "@chakra-ui/react";
+import { Link as ReactRouterLink } from 'react-router-dom';
 import Header from "../components/Header";
 
 const PrivacyPolice = () => {
@@ -10,203 +11,306 @@ const PrivacyPolice = () => {
         <Container maxW='8xl'>
           <Center>
             <Text as='h2' margin='50px 0' textStyle='heading-small'>
-              Политика конфиденциальности
+              Privacy policy
             </Text>
           </Center>
           <Text textStyle='body-small'>
-            Политика конфиденциальности NeoBazzar разработала настоящую Политику
-            конфиденциальности в соответствии с обязательствами NeoBazzar по
-            обеспечению конфиденциальности на веб-сайтах и маркетинговых
-            инициативах NeoBazzar. Ниже описаны методы сбора, распространения и
-            защиты информации NeoBazzar.  Согласие Если вы не согласны с
-            условиями настоящей Политики конфиденциальности, пожалуйста, не
-            заходите на веб-сайт NeoBazzar и не используйте его. Если вы хотите
-            отказаться от получения маркетинговых материалов NeoBazzar, нажмите
-            кнопку «Отписаться» в маркетинговом письме, которое вы получили от
-            нас. Сбор информации NeoBazzar собирает информацию для
-            предоставления более качественных услуг своим пользователям, а также
-            для лучшего понимания посетителей своего веб-сайта и того, какой
-            контент представляет для них интерес. NeoBazzar собирает информацию
-            следующими способами: информация, которую вы предоставляете нам
-            (например, адрес электронной почты,) с целью доступа к различным
-            загрузкам, просмотра определенного контента, подписки на новостную
-            рассылку NeoBazzar, регистрации ваших предпочтений в получении
-            маркетинговых материалов от NeoBazzar, а также ваших предпочтений в
-            отношении связи и т. д.; информация, которую NeoBazzar получает в
-            результате использования вами веб-сайта NeoBazzar, такая как
-            IP-адрес, тип браузера, интернет-провайдер, страницы
-            перехода/выхода, тип платформы, отметка даты/времени, количество
-            кликов, доменное имя и страна/штат всех посетителей веб-сайта
-            NeoBazzar; информацию о местонахождении при использовании веб-сайта
-            NeoBazzar, поскольку NeoBazzar может собирать и обрабатывать
-            информацию о вашем местоположении. NeoBazzar использует различные
-            технологии и инструменты для определения местоположения; информация,
-            которая считается агрегированными данными, такими как статистические
-            или демографические данные, которые NeoBazzar может использовать в
-            любых целях. Агрегированные данные могут быть получены из ваших
-            персональных данных, но не считаются персональными данными по
-            закону, поскольку они прямо или косвенно не раскрывают вашу
-            личность, за исключением случаев, когда NeoBazzar объединяет или
-            связывает агрегированные данные с вашими персональными данными таким
-            образом, чтобы они могли прямо или косвенно идентифицировать вас; и
-            NeoBazzar будет использовать вашу персональную информацию только в
-            тех целях, для которых она была собрана, за исключением случаев,
-            когда она обоснованно считает, что ей необходимо использовать ее по
-            другой причине, совместимой с первоначальной целью. Если NeoBazzar
-            потребуется использовать Ваши персональные данные в целях, не
-            связанных с этим, NeoBazzar уведомит Вас об этом и разъяснит
-            правовую основу, позволяющую NeoBazzar это сделать. Обмен
-            информацией NeoBazzar может раскрывать ваши персональные данные
-            следующим категориям получателей: любому компетентному
-            правоохранительному органу, регулирующему органу, государственному
-            органу, суду или другой третьей стороне, если NeoBazzar считает, что
-            раскрытие информации необходимо (а) в соответствии с применимым
-            законодательством или нормативными актами, (б) для осуществления,
-            установления или защиты своих законных прав или (в) для защиты своих
-            жизненно важных интересов или жизненно важных интересов любого
-            другого лица. любому другому лицу с вашего согласия на раскрытие
-            информации. Правовая основа обработки данных Если ваши персональные
-            данные защищены законодательством ЕС о защите данных, правовая
-            основа NeoBazzar для сбора и использования персональных данных,
-            описанных выше, будет зависеть от соответствующих персональных
-            данных и конкретного контекста, в котором NeoBazzar их собирает. Тем
-            не менее, NeoBazzar, как правило, собирает ваши персональные данные
-            только (а) в тех случаях, когда персональные данные необходимы для
-            исполнения договора с вами, (б) если обработка отвечает его законным
-            интересам и не противоречит вашим правам, или (в) если у него есть
-            ваше согласие на это. В некоторых случаях NeoBazzar также может
-            иметь юридическое обязательство по сбору ваших персональных данных
-            или иным образом может нуждаться в персональных данных для защиты
-            ваших жизненно важных интересов или жизненно важных интересов
-            другого лица. Если у вас есть вопросы или вам нужна дополнительная
-            информация о правовых основаниях, на которых NeoBazzar собирает и
-            использует ваши персональные данные, пожалуйста, свяжитесь с
-            NeoBazzar, используя контактную информацию, указанную в разделе
-            «Контактная информация» ниже и в правой колонке. Использование
-            информации Любая информация, собираемая NeoBazzar, будет
-            осуществляться в соответствии с настоящей Политикой
-            конфиденциальности в целях принятия более эффективных
-            бизнес-решений, поддержки выбранных вами видов деятельности.
-            NeoBazzar использует информацию о вашем товаре, чтобы адаптировать
-            ваш опыт работы с веб-сайтами NeoBazzar. Он также может использовать
-            любую неличную информацию, собранную для улучшения веб-сайтов
-            NeoBazzar, а также ваш IP-адрес для диагностики и администрирования
-            веб-сайтов. NeoBazzar будет хранить ваши персональные данные только
-            до тех пор, пока это необходимо для достижения целей, для которых
-            они были собраны, в том числе для выполнения любых юридических,
-            бухгалтерских или отчетных требований. Для определения надлежащего
-            срока хранения персональных данных NeoBazzar учитывает объем,
-            характер и конфиденциальность персональных данных, потенциальный
-            риск причинения вреда в результате несанкционированного
-            использования или раскрытия персональных данных, цели, в которых
-            NeoBazzar обрабатывает персональные данные, и возможность достижения
-            этих целей другими способами, а также применимые требования
-            законодательства. Международная передача данных NeoBazzar
-            обрабатывает информацию на серверах во многих странах мира, и вы
-            даете согласие на обработку ваших персональных данных на сервере,
-            расположенном за пределами страны, в которой вы проживаете. В этих
-            странах могут действовать законы о защите данных, которые отличаются
-            от законов вашей страны (а в некоторых случаях могут быть не такими
-            защитными). Тем не менее, NeoBazzar приняла надлежащие меры
-            предосторожности для обеспечения защиты ваших персональных данных в
-            соответствии с настоящей Политикой конфиденциальности, в том числе с
-            использованием Стандартных договорных условий Европейской комиссии
-            для передачи персональных данных между компаниями группы, которые
-            требуют, чтобы все компании группы защищали персональные данные,
-            обрабатываемые из Европейской экономической зоны, в соответствии со
-            стандартом, эквивалентным тому, который требуется в соответствии с
-            законодательством Европейского Союза о защите данных. Информационная
-            безопасность NeoBazzar защищает ваши персональные данные так же, как
-            и другие свои конфиденциальные данные, например, хранит их на
-            защищенных серверах, доступ к которым имеют только избранные
-            сотрудники NeoBazzar, и шифрует их для предотвращения
-            несанкционированного доступа. NeoBazzar внедрила процедуры для
-            борьбы с любыми нарушениями персональных данных и уведомит вас и
-            любой соответствующий регулирующий орган о нарушении, когда это
-            требуется по закону. Маркетинг Как объяснялось выше, NeoBazzar будет
-            собирать и использовать ваши персональные данные в маркетинговых
-            целях. Ваши данные будут храниться в нашей системе. Мы будем
-            использовать Ваши данные для информирования Вас о продуктах и
-            услугах NeoBazzar, которые, по нашему мнению, могут Вас
-            заинтересовать. В статистических целях мы будем собирать информацию
-            о вашем ответе на наши электронные письма и нашем взаимодействии с
-            вами для принятия решений о будущем маркетинге. Если вы хотите
-            прекратить сбор и использование этой информации, свяжитесь
-            с privacy@neobazzar.com. Ссылки Веб-сайты NeoBazzar содержат ссылки,
-            плагины и приложения на различные сторонние веб-сайты. Переход по
-            этим ссылкам или включение этих соединений может позволить третьим
-            лицам собирать или передавать данные о вас. NeoBazzar не
-            контролирует и не несет ответственности за содержание, политику
-            конфиденциальности или надежность таких сторонних подключений. Когда
-            вы покидаете веб-сайт NeoBazzar, NeoBazzar рекомендует вам
-            ознакомиться с уведомлением о конфиденциальности и политикой
-            конфиденциальности каждого веб-сайта, который вы посещаете. Ваши
-            права на защиту данных Если ваши персональные данные защищены
-            законодательством ЕС о защите данных, у вас есть следующие права на
-            защиту данных, которыми вы можете воспользоваться, связавшись с
-            NeoBazzar, используя контактную информацию, указанную в разделе
-            «Контактные данные» ниже и в правой колонке: Если вы
-            хотите запросить удаление вашей личной информации, вы можете сделать
-            это в настройках своего профиля на http://www.neobazzar.com/. Если
-            вы хотите получить доступ к своим персональным данным, исправить
-            их, обновить их, вы можете сделать это в любое время, связавшись с
-            NeoBazzar Кроме того, Вы можете возразить против обработки Ваших
-            персональных данных, попросить NeoBazzar ограничить обработку Ваших
-            персональных данных или запросить перенос Ваших персональных данных,
-            связавшись с NeoBazzar. Вы имеете право в любое время отказаться от
-            маркетинговых сообщений, которые вам отправляет NeoBazzar. Вы можете
-            воспользоваться этим правом, перейдя по ссылке «отписаться» или
-            «отказаться» в маркетинговых письмах, которые NeoBazzar отправляет
-            вам, или воспользовавшись соответствующим механизмом отказа для
-            маркетинга, не основанного на электронной почте. Аналогичным
-            образом, если NeoBazzar собрала и обрабатывает ваши персональные
-            данные на основании вашего согласия, вы можете отозвать свое
-            согласие в любое время. Отзыв Вашего согласия не повлияет на
-            законность любой обработки NeoBazzar, выполненной до Вашего отзыва,
-            а также не повлияет на обработку Ваших персональных данных,
-            осуществляемую на законных основаниях, отличных от согласия. Вы
-            имеете право подать жалобу в орган по надзору за соблюдением
-            законодательства о защите персональных данных в связи со сбором и
-            использованием NeoBazzar ваших персональных данных. Для получения
-            дополнительной информации обратитесь в местный орган по надзору за
-            соблюдением законодательства о защите персональных данных. Вам не
-            придется платить за доступ к вашей личной информации (или за
-            осуществление любых других прав). Тем не менее, NeoBazzar может
-            взимать разумную плату или отказывать в выполнении вашего запроса,
-            если ваш запрос является явно необоснованным, повторяющимся или
-            чрезмерным. NeoBazzar старается отвечать на все законные запросы в
-            течение одного месяца. Иногда это может занять больше времени, если
-            ваш запрос особенно сложный или вы сделали несколько запросов. В
-            этом случае NeoBazzar уведомит вас об этом и будет держать вас в
-            курсе. Cookies  Вы можете настроить свой браузер таким образом,
-            чтобы он отклонял все или некоторые файлы cookie браузера или
-            предупреждал вас, когда веб-сайты устанавливают файлы cookie или
-            получают доступ к ним. Если вы отключите файлы cookie или откажетесь
-            от них, некоторые части сайтов NeoBazzar могут стать недоступными
-            или работать неправильно. Более подробную информацию о файлах
-            cookie, используемых NeoBazzar можно найти в Политике NeoBazzar в
-            отношении файлов cookie. Изменения в Политике NeoBazzar оставляет за
-            собой право время от времени изменять или дополнять настоящую
-            Политику конфиденциальности по своему усмотрению. С изменениями
-            можно ознакомиться здесь или на сайтах NeoBazzar. Если вы
-            продолжаете пользоваться сайтами NeoBazzar, это означает, что вы
-            принимаете эти изменения. Эта версия последний раз обновлялась 12
-            апреля 2024 года, а предыдущие версии можно получить, связавшись с
-            NeoBazzar. Контактная информация Важно, чтобы персональные данные о
-            вас, хранящиеся в NeoBazzar, были точными и актуальными. Пожалуйста,
-            информируйте NeoBazzar, если ваши персональные данные изменятся в
-            ходе ваших отношений с NeoBazzar. Кроме того, если у вас есть
-            какие-либо вопросы о настоящей Политике конфиденциальности, практике
-            работы веб-сайта NeoBazzar или вашем взаимодействии с NeoBazzar
-            через веб-сайт NeoBazzar, пожалуйста, обращайтесь:
-            NeoBazzar@Email: privacy@neobazzar.com
+            <Text textStyle='body-h3' m="40px 0 20px">
+              1. General provisions
+            </Text>
+            <Text>
+              This privacy policy and personal data processing is compiled in
+              accordance with the requirements of the Law of the Republic of
+              Belarus dated 07/05/2021 No. 99-H "On Personal Data Protection"
+              (further referred to as the Personal Data Law) and defines the
+              procedure for processing personal data and measures to ensure the
+              security of personal data taken by NeoBazaar (further referred to
+              as the Operator).
+            </Text>
+            <Text mt={4}>
+              1.1. The Operator sets as its most important goal and condition
+              for the implementation of its activities the observance of human
+              and civil rights and freedoms in the processing of his personal
+              data, including the protection of the rights to privacy, personal
+              and family secrets.
+            </Text>
+            <Text mt={4}>
+              1.2. This Operator's policy regarding the processing of personal
+              data (hereinafter referred to as the Policy) applies to all
+              information that the Operator can receive about visitors to the
+              website <ChakraLink as={ReactRouterLink} to="/"> http://www.neobazaar.com. </ChakraLink>
+            </Text>
+            <Text mt={4}>
+              1.3. The User's use of the site means acceptance of this Privacy
+              Policy and the terms of processing of the User's personal data.
+            </Text>
+            <Text mt={4}>
+              1.4. In case of disagreement with the terms of the Privacy Policy,
+              the User must stop using the Website.
+            </Text>
+
+            <Text textStyle='body-h3' m="40px 0 20px">
+              2. Basic concepts used in Politics
+            </Text>
+            <Text mt={4}>
+              2.1. Automated processing of personal data – processing of
+              personal data using computer technology.
+            </Text>
+            <Text mt={4}>
+              2.2. Blocking of personal data – temporary termination of the
+              processing of personal data (except in cases where processing is
+              necessary to clarify personal data).
+            </Text>
+            <Text mt={4}>
+              2.3. Website, Website - a set of graphic and information
+              materials, as well as computer programs and databases that ensure
+              their availability on the Internet at a network address
+              <ChakraLink as={ReactRouterLink} to="/"> http://www.neobazaar.com. </ChakraLink>
+            </Text>
+            <Text mt={4}>
+              2.4. Personal data information system – a set of personal data
+              contained in databases and information technologies and technical
+              means that ensure their processing.
+            </Text>
+            <Text mt={4}>
+              2.5. Depersonalization of personal data – actions as a result of
+              which it is impossible to determine, without using additional
+              information, the identity of personal data to a specific User or
+              other personal data subject.
+            </Text>
+            <Text mt={4}>
+              2.6. Processing of personal data – any action (operation) or a set
+              of actions (operations) performed with or without the use of
+              automation tools with personal data, including collection,
+              recording, systematization, accumulation, storage, clarification
+              (updating, modification), extraction, use, transfer (distribution,
+              provision, access), depersonalization, blocking, deletion,
+              destruction of personal data.
+            </Text>
+            <Text mt={4}>2.7. The operator is NeoBazaar.</Text>
+            <Text mt={4}>
+              2.8. Personal data – any information related directly or
+              indirectly to a specific or identifiable User of the website
+              <ChakraLink as={ReactRouterLink} to="/"> http://www.neobazaar.com. </ChakraLink>
+            </Text>
+            <Text mt={4}>
+              2.9. Personal data authorized by the subject of personal data for
+              dissemination – personal data to which an unlimited number of
+              persons have access by the subject of personal data by giving
+              consent to the processing of personal data authorized by the
+              subject of personal data for distribution in accordance with the
+              procedure provided for by the Law on Personal Data (hereinafter
+              referred to as personal data authorized for distribution).
+            </Text>
+            <Text mt={4}>
+              2.10. User – any visitor to the website <ChakraLink as={ReactRouterLink} to="/"> http://www.neobazaar.com
+ </ChakraLink>            </Text>
+            <Text mt={4}>
+              2.11. Provision of personal data – actions aimed at disclosing
+              personal data to a certain person or a certain circle of persons.
+            </Text>
+            <Text mt={4}>
+              2.12. Dissemination of personal data – any actions aimed at
+              disclosure of personal data to an indefinite circle of persons
+              (transfer of personal data) or familiarization with personal data
+              of an unlimited number of persons, including disclosure of
+              personal data in the media, posting in information and
+              telecommunications networks or providing access to personal data
+              in any other way.
+            </Text>
+            <Text mt={4}>
+            2.13. Cross–border transfer of personal data is the transfer of personal data to the territory of a foreign state to an authority of a foreign state, a foreign individual or a foreign legal entity.              </Text>
+              <Text mt={4}>
+              2.14. Destruction of personal data – any actions as a result of which personal data is permanently destroyed with the inability to further restore the content of personal data in the personal data information system and/or the material carriers of personal data are destroyed.              </Text>
+              <Text mt={4}>
+              2.15. "Cookies" is a small piece of data sent by a web server and stored on the user's computer, which the web client or web oTextwser sends to the web server in an HTTP request each time when trying to open a page of the corresponding site.              </Text>
+              <Text mt={4}>
+              2.16. "IP address" is a unique network address of a node in a computer network built using the IP protocol.              </Text>
+
+              <Text textStyle='body-h3' m="40px 0 20px">
+              3. Basic rights and obligations of the Operator
+            </Text>
+              <Text mt={4}>
+              3.1. The Operator has the right to:</Text>
+              <Text mt={4}>– receive reliable information and/or documents containing personal data from the subject of personal data; </Text>
+              <Text mt={4}>– in case of withdrawal by the subject of personal data of consent to the processing of personal data, as well as sending a request to terminate the processing of personal data, the Operator has the right to continue processing personal data without the consent of the subject of personal data if there are grounds specified in the Law on Personal Data;</Text>
+              <Text mt={4}>– independently determine the composition and list of measures necessary and sufficient to ensure the fulfillment of obligations provided for by the Law on Personal Data and regulatory legal acts adopted in accordance with it, unless otherwise provided by the Law on Personal Data or other laws.   </Text>    
+              <Text mt={4}>
+              3.2. The Operator is obliged to:</Text>
+              <Text mt={4}>– to provide the subject of personal data, at his request, with information concerning the processing of his personal data;</Text>
+              <Text mt={4}>– organize the processing of personal data in accordance with the procedure established by the current legislation of the Republic of Belarus;</Text>
+              <Text mt={4}>– respond to requests and requests from personal data subjects and their legal representatives in accordance with the requirements of the Law on Personal Data;</Text>
+              <Text mt={4}>– to inform the authorized body for the protection of the rights of personal data subjects at the request of this body of the necessary information within 10 days from the date of receipt of such a request;</Text>
+              <Text mt={4}>– to publish or otherwise provide unrestricted access to this Policy regarding the processing of personal data;</Text>
+              <Text mt={4}>– take legal, organizational and technical measures to protect personal data from unauthorized or accidental access to them, destruction, modification, blocking, copying, provision, dissemination of personal data, as well as from other illegal actions in relation to personal data;</Text>
+              <Text mt={4}>– stop transferring (distributing, providing, accessing) personal data, stop processing and destroy personal data in the manner and in the cases provided for by the Law on Personal Data;</Text>
+              <Text mt={4}>– perform other duties provided for by the Law on Personal Data.           </Text>
+              <Text mt={4}>
+              3.3. The Operator does not verify the accuracy of the personal data provided by the User of the site.               </Text>
+
+              <Text textStyle='body-h3' m="40px 0 20px">
+              4. Basic rights and obligations of personal data subjects
+            </Text>              
+              <Text mt={4}>
+              4.1. Personal data subjects have the right to:</Text>
+              <Text mt={4}>– receive information regarding the processing of his personal data, except in cases provided for by law. The information is provided to the personal data subject by the Operator in an accessible form, and it should not contain personal data related to other personal data subjects, except in cases where there are legitimate grounds for disclosure of such personal data. The list of information and the procedure for obtaining it is established by the Law on Personal Data;</Text>
+              <Text mt={4}>– to require the operator to clarify his personal data, block or destroy them if the personal data is incomplete, outdated, inaccurate, illegally obtained or is not necessary for the stated purpose of processing, as well as to take measures provided for by law to protect their rights;</Text>
+              <Text mt={4}>– to put forward a condition of prior consent when processing personal data in order to promote goods, works and services on the market;</Text>
+              <Text mt={4}>– to revoke consent to the processing of personal data, as well as to send a request to terminate the processing of personal data;</Text>
+              <Text mt={4}>– to appeal to the authorized body for the protection of the rights of personal data subjects or in court against illegal actions or inaction of the Operator during the processing of his personal data;</Text>
+              <Text mt={4}>– to exercise other rights provided for by the legislation of the Republic of Belarus.            </Text>
+              <Text mt={4}>
+              4.2. The subjects of personal data are obliged to: </Text> 
+              <Text mt={4}>– provide the Operator with reliable data about themselves;</Text> 
+              <Text mt={4}>– inform the Operator about the clarification (updating, modification) of their personal data.   </Text>            
+              <Text mt={4}>
+              4.3. Persons who have provided the Operator with false information about themselves or information about another personal data subject without the latter's consent are liable in accordance with the legislation of the Republic of Belarus.              </Text>
+
+              <Text textStyle='body-h3' m="40px 0 20px">
+              5. The list of personal data for the processing of which the consent of the personal data subject is given            </Text>
+              <Text mt={4}>
+              5.1. This Privacy Policy establishes the obligations of the Operator to non-disclosure and ensure the protection of the confidentiality of personal data that the User provides at the request of the Operator.              </Text>
+              <Text mt={4}>
+              5.2. The personal data authorized for processing under this Privacy Policy is provided by the User by filling out registration forms on the Website <ChakraLink as={ReactRouterLink} to="/"> http://www.neobazaar.com. </ChakraLink>              </Text>
+              <Text mt={4}>
+              5.3. Registration data includes the following information: </Text> 
+              <Text mt={4}>– User Name; </Text> 
+              <Text mt={4}>– User e-mail address (e-mail).       </Text>         
+              <Text mt={4}>
+              5.4. The operator carries out the collection and processing of anonymous data that is automatically transferred to oTextwse the site, ad units and when visiting pages that have the statistical script of the system ("pixel"), including through the services of Internet statistics (Yandex Metric and Google Analytics):  </Text> 
+              <Text mt={4}>– IP address; </Text> 
+              <Text mt={4}>– information from cookies; </Text> 
+              <Text mt={4}>– information about the oTextwser (or other program that provides access to the display of ads); </Text> 
+              <Text mt={4}>– access time; </Text> 
+              <Text mt={4}>– the address of the page where the ad block is located; </Text> 
+              <Text mt={4}>– the address of the requested page; </Text> 
+              <Text mt={4}>– referrer (address of the previous page).   </Text>             
+              <Text mt={4}>
+              5.5. Disabling cookies may result in the inability to access parts of the site that require authorization.              </Text>
+              <Text mt={4}>
+              5.6. Payment for the cost of the Operator's products online is carried out through the use of the Robokassa payment system. This payment system collects and stores financial information in accordance with its User Agreement and Privacy Policy.              </Text>
+              <Text mt={4}>
+              5.7. The Operator does not store the full details of the card and does not process payments, receiving only a notification from the payment system about the fact of successful payment.              </Text>
+
+              <Text textStyle='body-h3' m="40px 0 20px">
+              6. Principles of personal data processing
           </Text>
-          <List textStyle="body-large" display="flex" flexDirection="column" gap={2} color="black" margin="30px 0 0">
-            <ListItem>Minsk</ListItem>
-            <ListItem>Nezavisimosti proospect, 21 </ListItem>
-            <ListItem>220095, Minsk, Belarus </ListItem>
-            <ListItem>Phone: +37529 2144897</ListItem>
-          </List>
+              <Text mt={4}>
+              6.1. The processing of personal data is carried out on a lawful and fair basis.              </Text>
+              <Text mt={4}>
+              6.2. The processing of personal data is limited to achieving specific, predetermined and legitimate goals. Processing of personal data incompatible with the purposes of personal data collection is not allowed.              </Text>
+              <Text mt={4}>
+              6.3. It is not allowed to combine databases containing personal data, the processing of which is carried out for purposes incompatible with each other.              </Text>
+              <Text mt={4}>
+              6.4. Only personal data that meet the purposes of their processing are subject to processing.              </Text>
+              <Text mt={4}>
+              6.5. The content and volume of the processed personal data correspond to the stated purposes of processing. Redundancy of the processed personal data in relation to the stated purposes of their processing is not allowed.              </Text>
+              <Text mt={4}>
+              6.6. When processing personal data, the accuracy of personal data, their sufficiency, and, if necessary, relevance in relation to the purposes of personal data processing are ensured. The Operator takes the necessary measures and/or ensures that they are taken to delete or clarify incomplete or inaccurate data.              </Text>
+              <Text mt={4}>
+              6.7. Personal data is stored in a form that allows you to identify the subject of personal data, no longer than the purposes of personal data processing require, unless the period of personal data storage is established by law, an agreement to which the subject of personal data is a party, beneficiary or guarantor. The processed personal data is destroyed or depersonalized upon achievement of the processing goals or in case of loss of the need to achieve these goals, unless otherwise provided by law.              </Text>
+             
+             
+              <Text textStyle='body-h3' m="40px 0 20px">
+              7. Purposes of Processing Personal Data
+          </Text>             
+              <Text mt={4}>7.1. The Operator processes the User's personal data for the following purposes: </Text>
+              <Text mt={4}>– communication with personal data subjects;</Text>
+              <Text mt={4}>– providing personal data subjects with Website products;</Text>
+              <Text mt={4}>– identification of the personal data subject;</Text>
+              <Text mt={4}>– providing the subject of personal data with access to the Website;</Text>
+              <Text mt={4}>– establishing feedback with the subject of personal data, including sending notifications, requests, processing requests and requests from the subject of personal data;</Text>
+              <Text mt={4}>– providing the subject of personal data with effective customer and technical support in case of problems related to the use of the Website;</Text>
+              <Text mt={4}>– providing the subject of personal data with news and (or) advertising newsletters, as well as other information by electronic communication E-mail and other means of communication;</Text>
+              <Text mt={4}>– depersonalized User data collected using Internet statistics services are used to collect information about User actions on the Site, improve the quality of the Site and its content;</Text>
+              <Text mt={4}>– create an account for making online payments;</Text>
+              <Text mt={4}>– processing and receiving online payments;</Text>
+              <Text mt={4}>– formation of statistical reports, conducting research;</Text>
+              <Text mt={4}>– implementation of economic activities;</Text>
+              <Text mt={4}>– exercise of other powers and duties assigned to the Operator by the legislation of the Republic of Belarus.
+              </Text>
+
+              <Text textStyle='body-h3' m="40px 0 20px">
+              8. Terms of personal data processing
+          </Text>  
+              <Text mt={4}>
+              8.1. The processing of personal data is carried out with the consent of the personal data subject to the processing of his personal data.              </Text>
+              <Text mt={4}>
+              8.2. The processing of personal data is necessary to achieve the goals provided for by law, to carry out the functions, powers and duties assigned to the operator by the legislation of the Republic of Belarus.              </Text>
+              <Text mt={4}>
+              8.3. The processing of personal data is necessary for the administration of justice, the execution of a judicial act, an act of another body or official to be executed in accordance with the legislation of the Republic of Belarus on enforcement proceedings.              </Text>
+              <Text mt={4}>
+              8.4. The processing of personal data is necessary for the performance of an agreement to which the personal data subject is a party or beneficiary or guarantor, as well as for the conclusion of an agreement on the initiative of the personal data subject or an agreement under which the personal data subject will be the beneficiary or guarantor.              </Text>
+              <Text mt={4}>
+              8.5. The processing of personal data is necessary to exercise the rights and legitimate interests of the operator or third parties or to achieve socially significant goals, provided that the rights and freedoms of the personal data subject are not violated.              </Text>
+              <Text mt={4}>
+              8.6. Personal data is processed, access to which is provided to an unlimited number of persons by the subject of personal data or at his request (hereinafter referred to as publicly available personal data).              </Text>
+              <Text mt={4}>
+              8.7. Personal data subject to publication or mandatory disclosure in accordance with the law is processed.              </Text>
+              
+              
+              <Text textStyle='body-h3' m="40px 0 20px">
+              9. The procedure for the collection, storage, transfer and other types of personal data processing          </Text>  
+              <Text mt={4}>
+              9.1. The security of personal data processed by the Operator is ensured through the implementation of legal, organizational and technical measures necessary to fully comply with the requirements of current legislation in the field of personal data protection.              </Text>
+              <Text mt={4}>
+              9.2. The Operator ensures the safety of personal data and takes all possible measures to exclude access to personal data of unauthorized persons.              </Text>
+              <Text mt={4}>
+              9.3. The User's personal data will never, under any circumstances, be transferred to third parties, except in cases related to the implementation of current legislation or if the subject of personal data has given consent to the Operator to transfer data to a third party to fulfill obligations under a civil contract.              </Text>
+              <Text mt={4}>
+              9.4. The period of processing of personal data is determined by the achievement of the purposes for which personal data was collected, unless another period is provided for by the contract or current legislation.              </Text>
+              <Text mt={4}>
+              9.5 The User may revoke his consent to the processing of personal data at any time by sending a notification to the Operator by e-mail to the Operator's e-mail address neodigitalbazaar@gmail.com marked "Withdrawal of consent to the processing of personal data".              </Text>
+              <Text mt={4}>
+              9.6. All information collected by third-party services, including payment systems, means of communication and other service providers, is stored and processed by these persons (Operators) in accordance with their User Agreement and Privacy Policy. The subject of personal data and/or with the specified documents. The Operator is not responsible for the actions of third parties, including the service providers specified in this paragraph.              </Text>
+              <Text mt={4}>
+              9.7. The prohibitions established by the subject of personal data on the transfer (except for granting access), as well as on the processing or conditions of processing (except for obtaining access) of personal data allowed for distribution, do not apply in cases of processing personal data in the state, public and other public interests defined by the legislation of the Republic of Belarus.              </Text>
+              <Text mt={4}>
+              9.8. The Operator ensures the confidentiality of personal data when processing personal data.              </Text>
+              <Text mt={4}>
+              9.9. The Operator stores personal data in a form that allows determining the subject of personal data for no longer than the purposes of personal data processing require, unless the period of personal data storage is established by law, an agreement to which the subject of personal data is a party, beneficiary or guarantor.              </Text>
+              <Text mt={4}>
+              9.10. The condition for the termination of personal data processing may be the achievement of the purposes of personal data processing, the expiration of the consent of the personal data subject, the withdrawal of consent by the personal data subject or the requirement to terminate the processing of personal data, as well as the identification of unlawful processing of personal data.              </Text>
+            
+              <Text textStyle='body-h3' m="40px 0 20px">
+              10. List of actions performed by the Operator with the received personal data                 </Text>  
+              <Text mt={4}>
+              10.1. The Operator collects, records, systematizes, accumulates, stores, clarifies (updates, changes), extracts, uses, transfers (distributes, provides, accesses), depersonalizes, blocks, deletes and destroys personal data.              </Text>
+              <Text mt={4}>
+              10.2. The Operator performs automated processing of personal data with or without receiving and/or transmitting the received information by information and telecommunication networks.              </Text>
+              
+              
+              <Text textStyle='body-h3' m="40px 0 20px">
+              11. Cross-border transfer of personal data
+                   </Text>  
+              <Text mt={4}>
+              11.1. Prior to the start of cross-border transfer of personal data, the Operator is obliged to notify the authorized body for the protection of the rights of personal data subjects of its intention to carry out cross-border transfer of personal data (such notification is sent separately from the notification of the intention to process personal data).              </Text>
+              <Text mt={4}>
+              11.2. Before submitting the above notification, the Operator is obliged to receive relevant information from the authorities of a foreign state, foreign individuals, and foreign legal entities to whom the cross-border transfer of personal data is planned.              </Text>
+              
+              
+              <Text textStyle='body-h3' m="40px 0 20px">
+              12. Confidentiality of personal data
+                   </Text> 
+              <Text mt={4}>
+              12.1. The operator and other persons who have gained access to personal data are obliged not to disclose or distribute personal data to third parties without the consent of the personal data subject, unless otherwise provided for by the legislation of the Republic of Belarus.              </Text>
+              <Text mt={4}>
+
+              <Text textStyle='body-h3' m="40px 0 20px">
+              13. Final provisions
+                   </Text> 
+                   13.1. Issues related to the processing of personal data that are not fixed in this Policy are regulated by the legislation of the Republic of Belarus.              </Text>
+              <Text mt={4}>
+              13.2. If any provision of the Policy is found to be contrary to the law, the remaining provisions that comply with the law remain in force and are valid, and any invalid provision will be considered deleted/amended to the extent necessary to ensure its compliance with the law.              </Text>
+              <Text mt={4}>
+              13.3. The User can receive any clarifications on issues of interest related to the processing of his personal data by contacting the Operator by e-mail neodigitalbazaar@gmail.com.              </Text>
+              <Text mt={4}>
+              13.4. This document will reflect any changes to the Operator's personal data processing policy. The policy is valid indefinitely until it is replaced by a new version.               </Text>
+              <Text mt={4}>
+              13.5. The current version of the Policy is available on the website <ChakraLink as={ReactRouterLink} to="/"> http://www.neobazaar.com. </ChakraLink>
+              </Text>
+</Text>
+          
         </Container>
       </Box>
     </>

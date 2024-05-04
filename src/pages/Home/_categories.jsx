@@ -58,57 +58,57 @@ const Categories = () => {
       rowGap={1}
     >
       <GridItem gridArea="1 / 1 / 2 / 2" bgImage={Gif3D} {...backgroundImageStyle} />
-      <GridItem gridArea="2 / 1 / 3 / 2" p="10px 20px" gap={0}>
+      <GridItem gridArea="2 / 1 / 3 / 2" p="5px 20px 20px" gap={0}>
       <Link style={linkCategories}>3D →</Link >
       </GridItem>
 
       <GridItem gridArea="1 / 2 / 2 / 3" bgImage={Education} {...backgroundImageStyle}  > 
       </GridItem>
-      <GridItem gridArea="2 / 2 / 3 / 3" p="10px 20px">
+      <GridItem gridArea="2 / 2 / 3 / 3" p="5px 20px 20px">
       <Link style={linkCategories}>EDUCATION →</Link >
       </GridItem>
 
 
       <GridItem gridArea="1 / 3 / 2 / 4" 
        bgImage={Audio} {...backgroundImageStyle}  />
-      <GridItem gridArea="2 / 3 / 3 / 4" p="10px 20px">      
+      <GridItem gridArea="2 / 3 / 3 / 4" p="5px 20px 20px">      
       <Link style={linkCategories}>AUDIO →</Link >
       </GridItem>
 
 
       <GridItem gridArea="3 / 1 / 4 / 2"  bgImage={Design} {...backgroundImageStyle} />
-      <GridItem gridArea="4 / 1 / 5 / 2" p="10px 20px">
+      <GridItem gridArea="4 / 1 / 5 / 2" p="5px 20px 20px">
       <Link style={linkCategories}>DESIGN →</Link >
       </GridItem>
 
 
       <GridItem gridArea="3 / 2 / 4 / 3"  bgImage={Paint} {...backgroundImageStyle}  />
-      <GridItem gridArea="4 / 2 / 5 / 3" p="10px 20px">
+      <GridItem gridArea="4 / 2 / 5 / 3" p="5px 20px 20px">
       <Link style={linkCategories}>DRAWING & PAINTING →</Link >
       </GridItem>
 
 
       <GridItem gridArea="3 / 3 / 4 / 4"> 
-      <Image src={Photo} objectFit="cover" alt='Photo' /></GridItem>
-      <GridItem gridArea="4 / 3 / 5 / 4" p="10px 20px">
+      <Image src={Photo} objectFit="cover" alt='Photo'  borderRadius='20px'/></GridItem>
+      <GridItem gridArea="4 / 3 / 5 / 4" p="5px 20px 20px">
       <Link style={linkCategories}>PHOTOGRAPHY →</Link >    
       </GridItem>
 
 
       <GridItem gridArea="5 / 1 / 6 / 2"  bgImage={Game} {...backgroundImageStyle}  />
-      <GridItem gridArea="6 / 1 / 7 / 2" p="10px 20px">
+      <GridItem gridArea="6 / 1 / 7 / 2" p="5px 20px 20px">
       <Link style={linkCategories}>GAMING →</Link >   
          </GridItem>
 
 
       <GridItem gridArea="5 / 2 / 6 / 3" bgImage={Sport} {...backgroundImageStyle}  />
-      <GridItem gridArea="6 / 2 / 7 / 3" p="10px 20px">
+      <GridItem gridArea="6 / 2 / 7 / 3" p="5px 20px 20px">
       <Link style={linkCategories}>FITNESS & HEALTH →</Link >     
       </GridItem>
 
 
       <GridItem gridArea="5 / 3 / 6 / 4"  bgImage={Code} {...backgroundImageStyle}  />
-      <GridItem gridArea="6 / 3 / 7 / 4" p="10px 20px">
+      <GridItem gridArea="6 / 3 / 7 / 4" p="5px 20px 20px">
       <Link style={linkCategories}>SOFTWARE DEVELOPMENT →</Link >
       </GridItem>
     </Grid>

@@ -40,6 +40,12 @@ const typography = extendTheme({
         fontSize: ["14px"],
         lineHeight: "20px",
       },
+      "body-h3": {
+        fontFamily: "Arial",
+        fontWeight: 700,
+        fontSize: ["20px"],
+        lineHeight: "20px",
+      },
   });
 
 export default typography;
