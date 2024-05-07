@@ -84,8 +84,8 @@ const Reviews = () => {
       padding='50px 0'
       overflowX='scroll'
       style={{
-        "scrollbar-width": "none",
-        "overflow-x": "scroll",
+        "scrollbarWidth": "none",
+        "overflowX": "scroll",
       }}>
       <Container className='reviews' maxW='max-content' margin='0 auto' whiteSpace='nowrap'>
         <Center>

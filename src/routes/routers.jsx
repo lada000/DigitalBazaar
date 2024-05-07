@@ -6,6 +6,8 @@ import TermsOfService from "../pages/termsOfService";
 import LogIn from "../pages/logIn";
 import { useLocation } from "react-router-dom";
 import SignUp from "../pages/signUp";
+import ProductCatalog from "../pages/CardList/productCatalog";
+import CategoryFilter from "../pages/CardList/_categoryFilter";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -26,9 +28,10 @@ const AllRoutes = () => (
       <Route path='/terms-of-service' element={<TermsOfService />} />
       <Route path='/log-in' element={<LogIn />} />
       <Route path='/sign-up' element={<SignUp />} />
+      <Route path='/:category' element={<ProductCatalog />} />
+      <Route path="/" element={<CategoryFilter/>} />
 
 
-      {/* Add more routes as needed */}
     </Routes>
   </Router>
 );
