@@ -9,6 +9,7 @@ import SignUp from "../pages/signUp";
 import ProductCatalog from "../pages/CardList/productCatalog";
 import CategoryFilter from "../pages/CardList/_categoryFilter";
 
+
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 

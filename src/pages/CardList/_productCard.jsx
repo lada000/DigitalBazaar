@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Box, Center, Link, Text } from "@chakra-ui/react";
+import { Box, Image, Text } from "@chakra-ui/react";
 import { BsBasket3 } from "react-icons/bs";
 
 
@@ -30,7 +30,7 @@ const ProductCard = ({ product }) => {
       borderRadius='14px'
       p='25px'
       color='#000'>
-      <img
+      <Image
         src={photo}
         alt={name}
         width='100%'

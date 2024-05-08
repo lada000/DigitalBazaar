@@ -1,21 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Box, Button, Container } from "@chakra-ui/react";
-import { Link as ReactRouterLink, useLocation, useParams } from "react-router-dom";
+import { Link as ReactRouterLink, useLocation, useParams, useNavigate   } from "react-router-dom";
 
 
 
 const CategoryFilter = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState('All');
  
   useEffect(() => {
-     const pathCategory = location.pathname.split('/')[1];
-     setSelectedCategory(pathCategory || 'All');
+      const pathCategory = location.pathname.split('/')[1];
+      setSelectedCategory(pathCategory || 'All');
   }, [location]);
  
-  const handleCategoryClick = (category) => {
-     setSelectedCategory(category);
-  };
+  const handleCategoryClick = useCallback((category) => {
+    navigate(`/${category}`);
+   }, [navigate]);
+   
 
  const ButtonStyle = (category) => ({
     color: selectedCategory === category ? '#2F2F2F' : '#606C8E',
@@ -45,28 +47,28 @@ const CategoryFilter = () => {
 };
 
 const backgroundColor = sectionFilterAndSearchBackgrounds[category] || "#ffffff";
-
-
-
  return (
     <Box as="section" className="AllCategories" padding='25px 0 50px'>
       <Container maxW="8xl" padding='0px'>
-        <Box display="flex" justifyContent="space-between" bg={backgroundColor} borderRadius="14px" padding="10px">
-        <ReactRouterLink to="/All"><Button sx={ButtonStyle('All')} onClick={() => handleCategoryClick('All')}>All</Button></ReactRouterLink>
-          <ReactRouterLink to="/3D"> <Button sx={ButtonStyle('3D')} onClick={() => handleCategoryClick('3D')}>3D</Button></ReactRouterLink>
-          <ReactRouterLink to="/Education"> <Button sx={ButtonStyle('Education')} onClick={() => handleCategoryClick('Education')}>Education</Button></ReactRouterLink>
-          <ReactRouterLink to="/Audio"> <Button sx={ButtonStyle('Audio')} onClick={() => handleCategoryClick('Audio')}>Audio</Button></ReactRouterLink>
-          <ReactRouterLink to="/Design"> <Button sx={ButtonStyle('Design')} onClick={() => handleCategoryClick('Design')}>Design</Button></ReactRouterLink>
-          <ReactRouterLink to="/Drawing-&-Painting"> <Button sx={ButtonStyle('Drawing-&-Painting')} onClick={() => handleCategoryClick('Drawing-&-Painting')}>Drawing & Painting</Button></ReactRouterLink>
-          <ReactRouterLink to="/Photography"> <Button sx={ButtonStyle('Photography')} onClick={() => handleCategoryClick('Photography')}>Photography</Button></ReactRouterLink>
-          <ReactRouterLink to="/Fitness-&-Health"> <Button sx={ButtonStyle('Fitness-&-Health')} onClick={() => handleCategoryClick('Fitness-&-Health')}>Fitness & Health</Button></ReactRouterLink>
-          <ReactRouterLink to="/Gaming"> <Button sx={ButtonStyle('Gaming')} onClick={() => handleCategoryClick('Games')}>Gaming</Button></ReactRouterLink>
-          <ReactRouterLink to="/Software-&-Development"> <Button sx={ButtonStyle('Software-&-Development')} onClick={() => handleCategoryClick('Software-&-Development')}>Software Development</Button></ReactRouterLink>
+      <Box display="flex" justifyContent="space-between" bg={backgroundColor} borderRadius="14px" padding="10px">
+          <Button sx={ButtonStyle('All')} onClick={() => handleCategoryClick('All')}>All</Button>
+          <Button sx={ButtonStyle('3D')} onClick={() => handleCategoryClick('3D')}>3D</Button>
+          <Button sx={ButtonStyle('Education')} onClick={() => handleCategoryClick('Education')}>Education</Button>
+          <Button sx={ButtonStyle('Audio')} onClick={() => handleCategoryClick('Audio')}>Audio</Button>
+          <Button sx={ButtonStyle('Design')} onClick={() => handleCategoryClick('Design')}>Design</Button>
+          <Button sx={ButtonStyle('Drawing-&-Painting')} onClick={() => handleCategoryClick('Drawing-&-Painting')}>Drawing & Painting</Button>
+          <Button sx={ButtonStyle('Photography')} onClick={() => handleCategoryClick('Photography')}>Photography</Button>
+          <Button sx={ButtonStyle('Fitness-&-Health')} onClick={() => handleCategoryClick('Fitness-&-Health')}>Fitness & Health</Button>
+          <Button sx={ButtonStyle('Gaming')} onClick={() => handleCategoryClick('Gaming')}>Gaming</Button>
+          <Button sx={ButtonStyle('Software-&-Development')} onClick={() => handleCategoryClick('Software-&-Development')}>Software Development</Button>
         </Box>
       </Container>
     </Box>
  );
 };
 
+const MemoizedCategoryFilter = React.memo(CategoryFilter);
 
-export default CategoryFilter;
+
+
+export default MemoizedCategoryFilter;

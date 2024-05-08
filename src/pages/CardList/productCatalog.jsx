@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import Header from "../../components/Header";
-import { Container, Box, Text, Link as ChakraLink } from "@chakra-ui/react";
-import { useLocation } from "react-router-dom";
+import { Container, Box } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import ProductCard from "./_productCard";
-import CategoryFilter from "./_categoryFilter";
+import MemoizedCategoryFilter from "./_categoryFilter";
 import Search from "./_search";
 import products from "./_products";
+
 
 const categoryFilterBackgrounds = {
   "3D": "#B23386",
@@ -33,8 +33,6 @@ const categoryBackgrounds = {
   "Software-&-Development": "#F8F7F7",
 };
 
-
-
 function ProductList({ products, backgroundColor }) {
   return (
     <Box
@@ -51,16 +49,41 @@ function ProductList({ products, backgroundColor }) {
   );
 }
 
+
+
 const ProductCatalog = () => {
-  const { category } = useParams();
-  let filteredProducts = products;
+    const { category } = useParams();
+    const [filteredProducts, setFilteredProducts] = useState(products);
+    const [searchResults, setSearchResults] = useState([]); 
+    const [isSearchActive, setIsSearchActive] = useState(false); 
+   
+    useEffect(() => {
+       if (category && category !== 'All') {
+         setFilteredProducts(products.filter((product) => product.category === category));
+       } else {
+         setFilteredProducts(products);
+       }
+       setSearchResults([]);
+       setIsSearchActive(false); 
+    }, [category, products]);
+   
+    const handleSearch = (query) => {
+       const results = filteredProducts.filter((product) => product.name.toLowerCase().includes(query.toLowerCase()));
+       setSearchResults(results); 
+       setIsSearchActive(true); 
+    };
 
- if (category && category !== 'All') {
-    filteredProducts = products.filter(
-      (product) => product.category === category,
+   function NoResults() {
+    return (
+       <div>
+         <p>
+           No products found.
+         </p>
+       </div>
     );
- }
-
+   }
+   
+ 
   const backgroundColor = categoryBackgrounds[category] || "#ffffff";
   const filterBackgrounds = categoryFilterBackgrounds[category] || "#ffffff";
   return (
@@ -69,15 +92,22 @@ const ProductCatalog = () => {
       <Box bg={filterBackgrounds} marginTop='50px' maxH='270px'>
         <Container maxW='8xl'>
           <Box>
-          <Search products={filteredProducts} />
-          <CategoryFilter/>
+          <Search onSearch={handleSearch} />
+          <MemoizedCategoryFilter/>
           </Box>
         </Container>
       </Box>
       <Container maxW='8xl'>
         <Box as="section" className="productList" margin="50px 0"> 
-        <ProductList products={filteredProducts} />
-        </Box>
+        {isSearchActive ? (
+            searchResults.length > 0 ? (
+              <ProductList products={searchResults} />
+            ) : (
+              <NoResults />
+            )
+          ) : (
+            <ProductList products={filteredProducts} />
+          )}   </Box>
       </Container>
     </Box>
   );
