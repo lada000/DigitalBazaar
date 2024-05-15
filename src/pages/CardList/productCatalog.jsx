@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import Header from "../../components/Header";
-import { Container, Box } from "@chakra-ui/react";
+import { Container, Box, Text } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import ProductCard from "./_productCard";
 import MemoizedCategoryFilter from "./_categoryFilter";
 import Search from "./_search";
 import products from "./_products";
-
+import { CiFaceFrown } from "react-icons/ci";
 
 const categoryFilterBackgrounds = {
   "3D": "#B23386",
@@ -18,7 +18,7 @@ const categoryFilterBackgrounds = {
   Gaming: "#DC341E",
   "Fitness-&-Health": "#859FEC",
   "Software-&-Development": "#2F2F2F",
-  "All": '#C5C2C0'
+  All: "#C5C2C0",
 };
 
 const categoryBackgrounds = {
@@ -49,65 +49,71 @@ function ProductList({ products, backgroundColor }) {
   );
 }
 
-
-
 const ProductCatalog = () => {
-    const { category } = useParams();
-    const [filteredProducts, setFilteredProducts] = useState(products);
-    const [searchResults, setSearchResults] = useState([]); 
-    const [isSearchActive, setIsSearchActive] = useState(false); 
-   
-    useEffect(() => {
-       if (category && category !== 'All') {
-         setFilteredProducts(products.filter((product) => product.category === category));
-       } else {
-         setFilteredProducts(products);
-       }
-       setSearchResults([]);
-       setIsSearchActive(false); 
-    }, [category, products]);
-   
-    const handleSearch = (query) => {
-       const results = filteredProducts.filter((product) => product.name.toLowerCase().includes(query.toLowerCase()));
-       setSearchResults(results); 
-       setIsSearchActive(true); 
-    };
+  const { category } = useParams();
+  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [searchResults, setSearchResults] = useState([]);
+  const [isSearchActive, setIsSearchActive] = useState(false);
 
-   function NoResults() {
-    return (
-       <div>
-         <p>
-           No products found.
-         </p>
-       </div>
+  useEffect(() => {
+    if (category && category !== "All") {
+      setFilteredProducts(
+        products.filter((product) => product.category === category),
+      );
+    } else {
+      setFilteredProducts(products);
+    }
+    setSearchResults([]);
+    setIsSearchActive(false);
+  }, [category, products]);
+
+  const handleSearch = (query) => {
+    const results = filteredProducts.filter((product) =>
+      product.name.toLowerCase().includes(query.toLowerCase()),
     );
-   }
-   
- 
+    setSearchResults(results);
+    setIsSearchActive(true);
+  };
+
+  function NoResults() {
+    return (
+      <Box sx={{  position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      textAlign: "-webkit-center"
+      }}>
+        <CiFaceFrown fontSize='44px' />
+        <Text fontSize='25px' fontWeight='700' lineHeight='20px' mt='25px'>Product not found</Text>
+      </Box>
+    );
+  }
+
   const backgroundColor = categoryBackgrounds[category] || "#ffffff";
   const filterBackgrounds = categoryFilterBackgrounds[category] || "#ffffff";
   return (
     <Box bg={backgroundColor} height='100vh'>
       <Header />
-      <Box bg={filterBackgrounds} marginTop='50px' maxH='270px'>
+      <Box bg={filterBackgrounds} marginTop='50px' maxH='270px' position='relative'>
         <Container maxW='8xl'>
           <Box>
-          <Search onSearch={handleSearch} />
-          <MemoizedCategoryFilter/>
+            <Search onSearch={handleSearch} />
+            <MemoizedCategoryFilter />
           </Box>
         </Container>
       </Box>
       <Container maxW='8xl'>
-        <Box as="section" className="productList" margin="50px 0"> 
-        {isSearchActive ? (
+        <Box as='section' className='productList' margin='50px 0' >
+          {isSearchActive ? (
             searchResults.length > 0 ? (
               <ProductList products={searchResults} />
             ) : (
-              <NoResults />
+              <NoResults/>
             )
           ) : (
             <ProductList products={filteredProducts} />
-          )}   </Box>
+          )}{" "}
+        </Box>
       </Container>
     </Box>
   );

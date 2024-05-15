@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import { Container, Text, Box, Center } from "@chakra-ui/react";
 import Girl from "../../image/Girl.png";
 
+
 const Reviews = () => {
   const blocks = [
     {
@@ -49,11 +50,11 @@ const Reviews = () => {
 
   const avatarStyle = {
     borderRadius: "16px",
-    backgroundColor: "rgba(203,153,249,100)",
+    backgroundColor: "white",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "right bottom, left top",
     backgroundSize: "contain, cover",
-    color: "#fff",
+    color: "#7E88A4",
     position: "relative",
     transition: "all .5s",
   };
@@ -63,24 +64,26 @@ const Reviews = () => {
     flexDirection: "column",
     gap: "5px",
     padding: "10px 10px",
+    color: "#7E88A4"
   };
 
   const reviewStyle = {
     display: "inline-block",
     padding: "1.1em",
     borderRadius: "24px",
-    backgroundColor: "#fff",
+    backgroundColor: "#A7D9D4",
     height: "445px",
     width: "300px",
     overflow: "hidden",
     margin: "0 1em",
     overflowY: "scroll",
     scrollbarWidth: "none",
+    color: "#7E88A4",
+
   };
   return (
     <Box
       as='section'
-      bg='rgba(167, 217, 212, 1)'
       padding='50px 0'
       overflowX='scroll'
       style={{
@@ -93,15 +96,14 @@ const Reviews = () => {
             as='h2'
             textStyle='heading-small'
             textAlign='center'
-            padding='30px 0'>
-            Why I love NeoBazaar
-          </Text>
+            padding='100px 0'
+            >
+What do we think about the Neobazaar? What problems does it solve <br/> and what opportunities does it open? Who is it for? We, the team that <br/> participated in its creation, will tell you about it.          </Text>
         </Center>
         {blocks.map((block, index) => (
           <Box
             key={index}
             className='review'
-            bgColor='green'
             style={reviewStyle}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}>
@@ -130,7 +132,7 @@ const Reviews = () => {
                 {block.role}
               </Text>
             </Box>
-            <Box className='name' style={flexTextStyle}>
+            <Box className='name' style={flexTextStyle} alignItems='center'>
               <Text
                 as='h3'
                 style={{
@@ -165,4 +167,31 @@ const Reviews = () => {
   );
 };
 
+<Text>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</Text>
+
 export default Reviews;
+
+
+
+
+
+
+
+
+

@@ -19,6 +19,9 @@ import { Md3DRotation } from "react-icons/md";
 import { CiFaceSmile } from "react-icons/ci";
 import { TbWorld } from "react-icons/tb";
 import { SiAudiomack } from "react-icons/si";
+import { useNavigate } from 'react-router-dom';
+
+
 
 const flexItemStyle = {
   flexBasis: "calc(50% - 10px)",
@@ -42,6 +45,11 @@ const posAbsolute = {
 };
 
 const ProductsList = () => {
+  const navigate = useNavigate();
+  const goToAllPage = () => {
+    navigate('/All');
+  };
+  
   return (
     <Box as='section' p='25px' position='relative'>
       <Container maxW='8xl'>
@@ -193,7 +201,7 @@ const ProductsList = () => {
             </Text>
               </GridItem>
               <GridItem gridArea='3 / 2 / 4 / 3'  p={4}>
-                 <Button
+                 <Button onClick={goToAllPage}
               rightIcon={<BsArrowRight fontSize="x-large" />}
               colorScheme='teal'
               w="100%"
